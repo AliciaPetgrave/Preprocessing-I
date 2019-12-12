@@ -206,9 +206,8 @@ nav a:hover {
 }
 .main1 {
   color: #ececeb;
-  display: flex;
-  flex-wrap: wrap;
   font-family: 'Montserrat', sans-serif;
+  display: flex;
 }
 .main1 h2 {
   color: #ececeb;
@@ -225,4 +224,5 @@ ul {
 }
 .skillwork {
   width: 50%;
+  justify-content: space-evenly;
 }
