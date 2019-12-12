@@ -23,6 +23,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	
+	
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -32,9 +34,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
+
 blockquote, q {
 	quotes: none;
 }
@@ -49,11 +49,134 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
+*{
+	box-sizing: border-box;
+	max-width: 100%;
+	padding:0;
+	margin:0;
 }
 
 html, body {
     height: 100%;
 }
+html{
+	font-size:62.5%;
+}
 
+body{
+	width:800px;
+	margin:0 auto;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+//variables
+@darkgrey: #708090;
+@semiwhite: #ececeb;
+@lightgrey: #BBBBBB;
+
+//mixins
+.fontsize16(){
+	font-size:1.6rem;
+}
+.flex(){
+	display:flex;
+}
+
+.bodycontainer{
+	width:800px;
+	background:@darkgrey;
+}
+
+//navvigation
+nav{
+	.flex();
+	justify-content:space-evenly;
+	padding:2rem;
+	font-family: 'Montserrat', sans-serif;
+	
+	a{
+		text-decoration:none;
+		color: black;
+		.fontsize16();
+	}//closes links
+	a:hover{
+		color:steelblue;
+	}//closes links hover
+}//closes nav
+
+
+//name & intro
+.intro section{
+	background:@semiwhite;
+	margin:0 auto;
+	padding:2rem;
+	font-family: 'Montserrat', sans-serif;
+
+	h1{
+		font-size:2.2rem;
+		color:black;
+		.flex();
+		justify-content:center;
+		padding-top:2rem;
+	}//closes h1
+	p{
+		.fontsize16();
+		.flex();
+		justify-content:center;
+		padding:5rem;
+		margin:0 auto;
+		width:70%;
+	}//closes introduction
+}//closes intro section
+
+//contact
+.contact{
+	color:@semiwhite;
+	background:#4682b4;
+	.fontsize16();
+	.flex();
+	justify-content:space-evenly;
+	padding:2rem 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+@media(max-width: 700px){
+	.contact{
+		flex-direction:column;
+		text-align:center;
+	}
+	.contact p{
+		padding:1.2rem;
+	}
+}//closes contact media query
+
+
+//skills
+.main1{
+	color:@semiwhite;
+	.flex();
+	flex-wrap:wrap;
+	font-family: 'Montserrat', sans-serif;
+
+	h2{
+		color:@semiwhite;
+		font-size:2rem;
+		text-align:center;
+		padding:2rem;
+	}
+}
+
+
+
+.main1 p, ul{
+	color: black;
+	.fontsize16();
+	text-align:center;
+	list-style: none;
+}
+
+.skillwork{
+	width:50%;
+}
