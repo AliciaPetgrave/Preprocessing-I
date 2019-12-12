@@ -64,10 +64,13 @@ html{
 }
 
 body{
+	width:100%;
+}
+
+.bodycontainer{
 	width:800px;
 	margin:0 auto;
 }
-
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
@@ -84,16 +87,11 @@ body{
 	display:flex;
 }
 
-.bodycontainer{
-	width:800px;
-	background:@darkgrey;
-}
-
-//navvigation
+//navigation
 nav{
 	.flex();
 	justify-content:space-evenly;
-	padding:2rem;
+	padding:4rem;
 	font-family: 'Montserrat', sans-serif;
 	
 	a{
@@ -142,7 +140,7 @@ nav{
 	font-family: 'Montserrat', sans-serif;
 }
 
-@media(max-width: 700px){
+@media(max-width: 500px){
 	.contact{
 		flex-direction:column;
 		text-align:center;
@@ -155,28 +153,42 @@ nav{
 
 //skills
 .main1{
-	color:@semiwhite;
-	font-family: 'Montserrat', sans-serif;
+	width:100%;
+	height:auto;
+	background:@darkgrey;
 	display:flex;
-	
-	h2{
-		color:@semiwhite;
-		font-size:2rem;
-		text-align:center;
-		padding:2rem;
-	}//closes h2
-}//closes main1
-
-
-
-.main1 p, ul{
-	color: black;
-	.fontsize16();
-	text-align:center;
-	list-style: none;
+	justify-content: center;
+	font-family: 'Montserrat';
 }
 
 .skillwork{
 	width:50%;
-	justify-content: space-evenly;
-}
+	padding:2rem;
+	text-align: center;
+
+	h2{
+		color:black;
+		font-size: 2rem;padding-bottom:2rem;
+	}//closes h2
+
+	p{
+		color:@semiwhite;
+		font-size:1.6rem;
+	}//closes p	
+}//closes skillwork
+
+.skillwork li{
+	font-size:1.4rem;	
+}//closes li
+
+
+@media(max-width:500px){
+	.main1{
+		display:flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	.skillwork{
+		margin:0 auto;
+	}
+}//closes media query

@@ -137,6 +137,9 @@ html {
   font-size: 62.5%;
 }
 body {
+  width: 100%;
+}
+.bodycontainer {
   width: 800px;
   margin: 0 auto;
 }
@@ -147,14 +150,10 @@ body {
   font-display: swap;
   src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
 }
-.bodycontainer {
-  width: 800px;
-  background: #708090;
-}
 nav {
   display: flex;
   justify-content: space-evenly;
-  padding: 2rem;
+  padding: 4rem;
   font-family: 'Montserrat', sans-serif;
 }
 nav a {
@@ -195,7 +194,7 @@ nav a:hover {
   padding: 2rem 0;
   font-family: 'Montserrat', sans-serif;
 }
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .contact {
     flex-direction: column;
     text-align: center;
@@ -205,24 +204,37 @@ nav a:hover {
   }
 }
 .main1 {
-  color: #ececeb;
-  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  height: auto;
+  background: #708090;
   display: flex;
-}
-.main1 h2 {
-  color: #ececeb;
-  font-size: 2rem;
-  text-align: center;
-  padding: 2rem;
-}
-.main1 p,
-ul {
-  color: black;
-  font-size: 1.6rem;
-  text-align: center;
-  list-style: none;
+  justify-content: center;
+  font-family: 'Montserrat';
 }
 .skillwork {
   width: 50%;
-  justify-content: space-evenly;
+  padding: 2rem;
+  text-align: center;
+}
+.skillwork h2 {
+  color: black;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+.skillwork p {
+  color: #ececeb;
+  font-size: 1.6rem;
+}
+.skillwork li {
+  font-size: 1.4rem;
+}
+@media (max-width: 500px) {
+  .main1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .skillwork {
+    margin: 0 auto;
+  }
 }
